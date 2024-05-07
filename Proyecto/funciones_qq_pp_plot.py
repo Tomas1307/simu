@@ -13,6 +13,7 @@ import seaborn as sns
 
 """**Gráficas PP plot y QQ plot para una distribución normal**"""
 def PP_QQ_plot_normal(data,media="estimado",desvesta="estimado"):
+    
     # Se verifica si se estiman parámetros o se utilizan los parámetros dados por el usuario
     if media=="estimado":
         mean = np.mean(data)

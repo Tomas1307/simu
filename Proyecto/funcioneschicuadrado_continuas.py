@@ -74,8 +74,12 @@ def chi_square_normal_goodness_of_fit(data,media="estimado",desvesta="estimado",
     # Calculate the p-value
     p_value = 1 - chi2.cdf(chi_squared, degrees_of_freedom)
 
-    respuesta = "Chi-squared statistic: "+ str(chi_squared) + "\np-value: " + str(p_value)
+    if float(p_value)>0.5:
+        ans = "Sigue la distribucion"
+    else:
+        ans = "No sigue la distribucion"
 
+    respuesta = "Chi-squared statistic: "+ str(chi_squared) + "\np-value: " + str(p_value) +"\n " + str(ans)
     return print(respuesta)
 
 """**Función Chi-Cuadrado para una distribución lognormal**"""
@@ -127,7 +131,12 @@ def chi_square_lognormal_goodness_of_fit(data,media="estimado",desvesta="estimad
     # Calculate the p-value
     p_value = 1 - chi2.cdf(chi_squared, degrees_of_freedom)
 
-    respuesta = "Chi-squared statistic: "+ str(chi_squared) + "\np-value: " + str(p_value)
+    if float(p_value)>0.5:
+        ans = "Sigue la distribucion"
+    else:
+        ans = "No sigue la distribucion"
+
+    respuesta = "Chi-squared statistic: "+ str(chi_squared) + "\np-value: " + str(p_value) +"\n " + ans
     
     return print(respuesta)
 
@@ -185,8 +194,12 @@ def chi_square_exponential_goodness_of_fit(data,tasa="estimado",r=1):
     # Calculate the p-value
     p_value = 1 - chi2.cdf(chi_squared, degrees_of_freedom)
 
-    respuesta = "Chi-squared statistic: "+ str(chi_squared) + "\np-value: " + str(p_value)
+    if float(p_value)>0.5:
+        ans = "Sigue la distribucion"
+    else:
+        ans = "No sigue la distribucion"
 
+    respuesta = "Chi-squared statistic: "+ str(chi_squared) + "\np-value: " + str(p_value) +"\n " + ans
     return print(respuesta)
 
 """**Función Chi-Cuadrado para una distribución uniforme**"""
@@ -242,7 +255,12 @@ def chi_square_uniform_goodness_of_fit(data,minimo="estimado",maximo="estimado",
     # Calculate the p-value
     p_value = 1 - chi2.cdf(chi_squared, degrees_of_freedom)
 
-    respuesta = "Chi-squared statistic: "+ str(chi_squared) + "\np-value: " + str(p_value)
+    if float(p_value)>0.5:
+        ans = "Sigue la distribucion"
+    else:
+        ans = "No sigue la distribucion"
+
+    respuesta = "Chi-squared statistic: "+ str(chi_squared) + "\np-value: " + str(p_value) +"\n " + ans
     
     return print(respuesta)
 
@@ -301,7 +319,12 @@ def chi_square_triangular_goodness_of_fit(data,minimo="estimado",maximo="estimad
     # Calculate the p-value
     p_value = 1 - chi2.cdf(chi_squared, degrees_of_freedom)
 
-    respuesta = "Chi-squared statistic: "+ str(chi_squared) + "\np-value: " + str(p_value)
+    if float(p_value)>0.5:
+        ans = "Sigue la distribucion"
+    else:
+        ans = "No sigue la distribucion"
+
+    respuesta = "Chi-squared statistic: "+ str(chi_squared) + "\np-value: " + str(p_value) +"\n " + ans
 
     return print(respuesta)
 
@@ -355,7 +378,12 @@ def chi_square_gamma_goodness_of_fit(data,media="estimado",varianza="estimado",r
     # Calculate the p-value
     p_value = 1 - chi2.cdf(chi_squared, degrees_of_freedom)
 
-    respuesta = "Chi-squared statistic: "+ str(chi_squared) + "\np-value: " + str(p_value)
+    if float(p_value)>0.5:
+        ans = "Sigue la distribucion"
+    else:
+        ans = "No sigue la distribucion"
+
+    respuesta = "Chi-squared statistic: "+ str(chi_squared) + "\np-value: " + str(p_value) +"\n " + ans
     
     return print(respuesta)
 
@@ -405,6 +433,11 @@ def chi_square_weibull_goodness_of_fit(data,forma="estimado",escala="estimado",r
     # Calculate the p-value
     p_value = 1 - chi2.cdf(chi_squared, degrees_of_freedom)
 
-    respuesta = "Chi-squared statistic: "+ str(chi_squared) + "\np-value: " + str(p_value)
+    if float(p_value)>0.5:
+        ans = "Sigue la distribucion"
+    else:
+        ans = "No sigue la distribucion"
+
+    respuesta = "Chi-squared statistic: "+ str(chi_squared) + "\np-value: " + str(p_value) +"\n " + ans
 
     return print(respuesta)
